@@ -9,7 +9,7 @@ sudo pip install rospkg
 #ros install
 cd ..
 git clone git@github.com:EitoHayashi/ros_setup_scripts_Ubuntu16.04_server.git
-cd ./ros_setup_scripts_Ubuntu14.04_server
+cd ./ros_setup_scripts_Ubuntu16.04_server
 bash ./step0.bach
 bash ./step1.bash
 
