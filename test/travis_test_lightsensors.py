@@ -1,4 +1,4 @@
-#!/user/bin/env python
+#!/usr/bin/env python
 #encoding: utf8
 import unittest,rostest
 import rosnode,rospy
@@ -11,14 +11,18 @@ class LightsensorTest(unittest.TestCase):
         rospy.Subscriber('lightsensors',LightSensorValues,self.callback)
         self.values = LightSensorValues()
 
-    def callback(self,data)
+    def callback(self,data):
         self.count += 1
         self.values = data
 
     def check_values(self,lf,ls,rs,rf):
         vs = self.values
         self.assertEqual(vs.left_forward,lf,"different value: left_forward")
-
+        self.assertEqual(vs.left_side,ls,"different value: left_side")
+        self.assertEqual(vs.right_side,rs,"different value: right _side")
+        self.assertEqual(vs,right_forward,rf,"different value: right_forward")
+        self.assertEqual(vs,sum_all,lf+ls+rs+rf,"different value: sum_all")
+        self.assertEqual(vs,sum_forward,lf+rf,"different value: sum_forward")
 
     def test_node_exist(self):
         nodes = rosnode.get_node_names()
