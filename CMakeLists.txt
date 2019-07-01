@@ -52,7 +52,7 @@ add_message_files(
    LightSensorValues.msg
 #   Message1.msg
 #   Message2.msg
- )
+)
 
 ## Generate services in the 'srv' folder
 # add_service_files(
@@ -72,7 +72,7 @@ add_message_files(
 generate_messages(
    DEPENDENCIES
    std_msgs
- )
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
